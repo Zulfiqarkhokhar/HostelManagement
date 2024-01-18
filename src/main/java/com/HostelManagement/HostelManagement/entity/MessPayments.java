@@ -19,7 +19,10 @@ public class MessPayments {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long Id;
-    private int Amount;
+    private int paid;
+    private int totalAmount=7000;
+
+    private int remaining;
 
     private Date StartDate = new Date();
 

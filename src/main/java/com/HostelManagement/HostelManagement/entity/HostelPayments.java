@@ -20,11 +20,11 @@ public class HostelPayments {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private int hostelFee;
+    private int paid;
 
     private int totalFee = 1500;
 
-    private String flag;
+    private int remaining;
 
     private Date startDate = new Date();
 }

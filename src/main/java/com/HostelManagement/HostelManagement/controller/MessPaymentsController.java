@@ -3,11 +3,13 @@ package com.HostelManagement.HostelManagement.controller;
 import com.HostelManagement.HostelManagement.entity.MessPayments;
 import com.HostelManagement.HostelManagement.repository.MessPaymentsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin("http://localhost:3001")
 public class MessPaymentsController {
 
     @Autowired

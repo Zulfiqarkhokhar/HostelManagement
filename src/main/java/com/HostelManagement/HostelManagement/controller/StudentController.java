@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController("/api")
-@CrossOrigin("http://localhost:3001")
+@CrossOrigin("http://localhost:3000")
 public class StudentController {
 
     @Autowired

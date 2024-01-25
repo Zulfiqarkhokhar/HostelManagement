@@ -7,21 +7,20 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class HostelPayments {
+@AllArgsConstructor
+@Entity
+public class MessExpenses {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+    private String description;
+    private int amount;
 
-    private int total;
-    private int paid;
+    Date date = new Date();
 
-    private int remaining;
-
-    private Date startDate = new Date();
+    private int totalExpenses;
 
 }

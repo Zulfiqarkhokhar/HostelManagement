@@ -11,13 +11,14 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "students")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String name;
-    private String FatherName;
+    private String fatherName;
     private String cnic;
     private String phone;
     private String studentId;
@@ -28,10 +29,8 @@ public class Student {
     private int roomNo;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "hostel_payment_id", referencedColumnName = "id")
     private HostelPayments hostelPayments;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "mess_payment_id", referencedColumnName = "id")
     private MessPayments messPayments;
 }
